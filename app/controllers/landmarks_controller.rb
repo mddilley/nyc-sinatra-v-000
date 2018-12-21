@@ -26,6 +26,7 @@ class LandmarksController < ApplicationController
 
   patch '/landmarks' do
     binding.pry
+    if params[:landmark][:name].strip != "" && params[:landmark][:year_completed].strip != ""
     redirect to "/landmarks/#{params[:id]} %>"
   end
 

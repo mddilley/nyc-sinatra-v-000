@@ -6,7 +6,7 @@ class LandmarksController < ApplicationController
 
   post '/landmarks' do
     @landmark = Landmark.create(params[:landmark])
-    redirect to "/landmarks/#{params[:id]} %>"
+    redirect to "/landmarks/#{params[:id]}""
   end
 
   get '/landmarks' do
@@ -27,7 +27,7 @@ class LandmarksController < ApplicationController
   patch '/landmarks' do
     if params[:landmark][:name].strip != "" && params[:landmark][:year_completed].strip != ""
       @landmark = Landmark.create(:name => params[:landmark][:name], :year_completed => params[:landmark][:year_completed])
-    redirect to "/landmarks/#{params[:id]} %>"
+    redirect to "/landmarks/#{params[:id]}"
   end
 
 end

@@ -25,6 +25,7 @@ class LandmarksController < ApplicationController
   end
 
   patch '/landmarks/:id' do
+    binding.pry
     if params[:landmark][:name].strip != ""
       @landmark = Landmark.update(:name => params[:landmark][:name])
     elsif params[:landmark][:year_completed].strip != ""

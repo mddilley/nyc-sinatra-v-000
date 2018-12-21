@@ -3,13 +3,12 @@
 <strong>Name: <%= @landmark.name %></strong>
 
 <form action="/landmarks" method="post">
-  <strong>Name:</strong>
-  <label>Name </label>
+  <label>Edit Name: </label>
   <input type="text" name="landmark[name]" id="landmark_name">
 
   <p>
     <strong>Year Completed: <%= @landmark.year_completed %></strong>
-    <label>Year Completed </label>
+    <label>Edit Year Completed: </label>
     <input type="text" name="landmark[year_completed]" id="landmark_year_completed">
   </p>
   <input type="submit" value="Create New Landmark">

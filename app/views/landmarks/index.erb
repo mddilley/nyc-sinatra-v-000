@@ -3,7 +3,7 @@
 <% @landmarks.each_with_index do |l, i| %>
 
 <p>
-  <a href="/landmarks/<%= l.id %>"><strong><%= i + 1 %>. <%= l.name %>, <%= l.year %></strong></a>
+  <a href="/landmarks/<%= l.id %>"><strong><%= i + 1 %>. <%= l.name %>, <%= l.year_completed %></strong></a>
 </p>
 <% end %>
 

@@ -3,6 +3,7 @@
 <strong>Name: <%= @landmark.name %></strong>
 
 <form action="/landmarks" method="post">
+  <input type="hidden" id="hidden" name="_method" value="patch">
   <label>Edit Name: </label>
   <input type="text" name="landmark[name]" id="landmark_name">
 

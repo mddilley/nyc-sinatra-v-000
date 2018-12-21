@@ -24,7 +24,7 @@ class LandmarksController < ApplicationController
     erb :"/landmarks/edit"
   end
 
-  patch '/landmarks' do
+  patch '/landmarks/:id' do
     if params[:landmark][:name].strip != "" && params[:landmark][:year_completed].strip != ""
       @landmark = Landmark.create(:name => params[:landmark][:name], :year_completed => params[:landmark][:year_completed])
     end

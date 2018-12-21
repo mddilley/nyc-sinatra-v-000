@@ -30,6 +30,7 @@ class LandmarksController < ApplicationController
     elsif params[:landmark][:year_completed].strip != ""
       @landmark = Landmark.update(:year_completed => params[:landmark][:year_completed])
     end
+    @landmark.save
     redirect to "/landmarks/#{params[:id]}"
   end
 

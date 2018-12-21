@@ -25,7 +25,6 @@ class LandmarksController < ApplicationController
   end
 
   patch '/landmarks/:id' do
-    binding.pry
     landmark = Landmark.find(params[:id])
     if params[:landmark][:name].strip != ""
       landmark.update(:name => params[:landmark][:name])

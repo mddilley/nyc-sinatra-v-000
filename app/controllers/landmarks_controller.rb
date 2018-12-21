@@ -26,7 +26,7 @@ class LandmarksController < ApplicationController
 
   patch '/landmarks' do
 
-    redirect to "/landmarks/"
+    redirect to "/landmarks/<%= params[:id] %>"
   end
 
 end

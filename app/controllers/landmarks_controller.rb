@@ -6,7 +6,7 @@ class LandmarksController < ApplicationController
 
   post '/landmarks' do
     @landmark = Landmark.create(params[:landmark])
-    redirect to "/landmarks/<%= #{params[:id]} %>"
+    redirect to "/landmarks/#{params[:id]} %>"
   end
 
   get '/landmarks' do
@@ -26,7 +26,7 @@ class LandmarksController < ApplicationController
 
   patch '/landmarks' do
     binding.pry
-    redirect to "/landmarks/<%= #{params[:id]} %>"
+    redirect to "/landmarks/#{params[:id]} %>"
   end
 
 end

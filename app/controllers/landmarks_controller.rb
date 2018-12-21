@@ -28,7 +28,8 @@ class LandmarksController < ApplicationController
     binding.pry
     if params[:landmark][:name].strip != ""
       @landmark = Landmark.update(:name => params[:landmark][:name])
-    elsif params[:landmark][:year_completed].strip != ""
+    end
+    if params[:landmark][:year_completed].strip != ""
       @landmark = Landmark.update(:year_completed => params[:landmark][:year_completed])
     end
     @landmark.save

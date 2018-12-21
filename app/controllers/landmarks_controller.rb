@@ -26,7 +26,7 @@ class LandmarksController < ApplicationController
 
   patch '/landmarks/:id' do
     if params[:landmark][:name].strip != "" && params[:landmark][:year_completed].strip != ""
-      @landmark = Landmark.create(:name => params[:landmark][:name], :year_completed => params[:landmark][:year_completed])
+      @landmark = Landmark.update(:name => params[:landmark][:name], :year_completed => params[:landmark][:year_completed])
     end
     redirect to "/landmarks/#{params[:id]}"
   end
